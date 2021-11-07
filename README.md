@@ -3,9 +3,9 @@
 ## getting started
 
 ```
-cd ~ && git clone --recursive https://github.com/M3NIX/.dotfiles.git
-cd .dotfiles && ./install.sh
-~/.base16/base16-update.sh google-dark
+cd ~
+git clone https://github.com/M3NIX/.dotfiles.git && cd .dotfiles
+./install.sh
 ```
 
 ## configuration

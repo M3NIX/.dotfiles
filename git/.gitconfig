@@ -6,11 +6,15 @@
     editor = vim
 
 [alias]
-	a = add .
-	s = status
-	p = push
-	d = diff
-	br = branch
-	co = checkout
-	cm = commit -m
-	lo = log --graph --oneline
+    a = add .
+    s = status
+    p = push
+    d = diff
+    br = branch
+    co = checkout
+    cm = commit -m
+    lo = log --graph --oneline
+    amend = commit --amend --reuse-message=HEAD
+
+[commit]
+    gpgsign = true

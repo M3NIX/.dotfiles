@@ -44,10 +44,9 @@ fi
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # load color scheme
-BASE16_SHELL="$HOME/.base16/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
+if [ -f ~/.bash_theme ]; then
+    . ~/.bash_theme
+fi
 
 # load aliases
 if [ -f ~/.bash_aliases ]; then
