@@ -38,7 +38,7 @@ function parse_git_branch() {
 # use bat for syntax highlighting
 function cat {
   if [[ -f /usr/bin/bat ]];then
-    /usr/bin/bat "$1"
+    /usr/bin/bat --theme base16 "$1"
   else
     /bin/cat "$1"
   fi

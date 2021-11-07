@@ -13,3 +13,6 @@
 [submodule "base16/.base16/base16-i3"]
 	path = base16/.base16/base16-i3
 	url = https://github.com/khamer/base16-i3.git
+[submodule "base16/.base16/base16-i3status"]
+	path = base16/.base16/base16-i3status
+	url = https://github.com/stacyharper/base16-i3status.git

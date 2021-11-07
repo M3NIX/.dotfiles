@@ -52,6 +52,22 @@ update_i3() {
   fi
 }
 
+update_i3status() {
+  local theme=$1
+  local file="$DATA_PATH/base16-i3status/colors/base16-$theme.config"
+  local i3status_dir="$HOME/.config/i3status"
+
+  if [[ ! -f $file ]]; then
+    echo "i3-status theme not found."
+  else
+    if [[ -d $i3status_dir ]]; then
+      cat $file > "$i3status_dir/colors"
+      cat $i3status_dir/base $i3status_dir/colors > $i3status_dir/config && i3-msg restart &> /dev/null
+      echo "Updated base16-i3status theme"
+    fi
+  fi
+}
+
 update_shell(){
   local theme=$1
   local file="$DATA_PATH/base16-shell/scripts/base16-$theme.sh"
@@ -86,3 +102,4 @@ update_shell $1
 update_vim $1
 update_rofi $1
 update_i3 $1
+update_i3status $1
