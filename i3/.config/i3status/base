@@ -8,29 +8,31 @@
 
 order += "tztime local"
 order += "ethernet _first_"
-order += "disk /"
-order += "load"
+order += "cpu_usage"
 order += "memory"
+order += "volume master"
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
+        format_up = "Ethernet: %ip"
+        format_down = "Ethernet: down"
 }
 
-disk "/" {
-        format = "%avail"
-}
-
-load {
-        format = "%1min"
+cpu_usage {
+        format = "CPU: %usage"
+        max_threshold = 75
 }
 
 memory {
-        format = "%used | %available"
-        threshold_degraded = "1G"
-        format_degraded = "MEMORY < %available"
+        format = "MEM: %percentage_used"
+        threshold_critical = 10%
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "%A, %d %B %H:%M:%S"
+        timezone = "Europe/Berlin"
+}
+
+volume master {
+        format = "♪ %volume  "
+        device = "pulse:1"
 }
