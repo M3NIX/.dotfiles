@@ -1,0 +1,23 @@
+# Use Unicode & do NOT use the "8bit hack" to input/output non-ASCII characters
+# See http://code.google.com/p/iterm2/wiki/Keybindings
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# cycle with TAB through auto-complete options
+"\t": menu-complete
+set show-all-if-ambiguous on
+set menu-complete-display-prefix on
+
+# When pressing up or down arrows,
+# show only history entries that match what was already typed
+"\e[A":history-search-backward
+"\e[B":history-search-forward
+
+# move cursor a word when presinng ctrl+right or ctrl+left
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+# Turn on case insensitivity for tab-completion
+# Ex.: type "doc<tab>" to search for "Documents"
+set completion-ignore-case On

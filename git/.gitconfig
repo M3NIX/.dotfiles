@@ -1,0 +1,16 @@
+[user]
+    email = julian@ortel.tech
+    name = M3NIX
+
+[core]
+    editor = vim
+
+[alias]
+	a = add .
+	s = status
+	p = push
+	d = diff
+	br = branch
+	co = checkout
+	cm = commit -m
+	lo = log --graph --oneline
