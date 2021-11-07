@@ -22,6 +22,10 @@ alias ff="grep -iRl $1" # find file
 alias b16="~/.base16/base16-update.sh" # base16 theme updater
 alias pipi="python3 -m pip install --user" # install pip package as user
 
+alias vup="pactl set-sink-volume @DEFAULT_SINK@ +10%" # volume up
+alias vdown="pactl set-sink-volume @DEFAULT_SINK@ -10%" # volume down
+alias vmute="pactl set-sink-mute @DEFAULT_SINK@ toggle" # volume mute toggle
+
 ### functions ###
 
 # get current branch in git repo

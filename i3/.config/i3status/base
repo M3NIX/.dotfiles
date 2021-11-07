@@ -33,6 +33,9 @@ tztime local {
 }
 
 volume master {
-        format = "♪ %volume  "
-        device = "pulse:1"
+        format = "♪: %volume"
+        format_muted = "♪: %volume"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
 }
