@@ -1,0 +1,46 @@
+#!/bin/bash
+
+TEMPLATE_FOLDER=~/.local/templates/
+
+if [ $# -eq 0 ]
+  then
+    echo "No file extensions as argument supplied"
+    exit 1
+fi
+
+# split first argument to get filename and extension
+base=$(basename -- "$1")
+extension="${base##*.}"
+filename="${base%.*}"
+
+# get all templates
+templates=(`find $TEMPLATE_FOLDER -name "*.$extension"`)
+
+# check if template with supplied extension is found
+if [ ${#templates[@]} -eq 0 ]; then
+    # exit when no template found
+    echo "No template with file extension .$extension found"
+    exit 1
+elif [ ${#templates[@]} -eq 1 ]; then
+    # copy template and open new file
+    cp ${templates[0]} $PWD/$filename.$extension
+    vim $PWD/$filename.$extension
+else
+    # let the user choose a template when multiple are found
+    echo "Please choose a template:"
+    for t in ${templates[*]}; do
+        ((i++))
+        template=$(basename -- "$t")
+        echo "[$i] $template"
+    done
+    read selection
+    if [[ $selection -gt 0 && $selection -le ${#templates[@]} ]]; then
+        # copy template and open new file
+        cp ${templates[(($selection-1))]} $PWD/$filename.$extension
+        vim $PWD/$filename.$extension
+    else
+        echo "Invalid selection"
+        exit 1
+    fi
+fi
+
