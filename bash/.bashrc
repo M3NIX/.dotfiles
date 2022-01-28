@@ -52,3 +52,6 @@ fi
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+# start ssh-agent
+eval $(ssh-agent -s) > /dev/null

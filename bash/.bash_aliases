@@ -21,6 +21,7 @@ alias fc="grep -HiRn $1" #find content
 alias ff="grep -iRl $1" # find file
 alias b16="~/.base16/base16-update.sh" # base16 theme updater
 alias pipi="python3 -m pip install --user" # install pip package as user
+alias ssh-unlock="ssh-add ~/.ssh/id_ed25519"
 
 alias vup="pactl set-sink-volume @DEFAULT_SINK@ +10%" # volume up
 alias vdown="pactl set-sink-volume @DEFAULT_SINK@ -10%" # volume down
