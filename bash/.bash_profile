@@ -2,6 +2,9 @@
 # ~/.bash_profile
 #
 
+# start ssh-agent
+eval `ssh-agent -s`
+
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # set PATH so it includes user's private bin if it exists
