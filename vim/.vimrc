@@ -53,5 +53,8 @@ Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
-" Load colorscheme
-source ~/.vim/colorscheme.vim
+" Load colorscheme when available
+let vimcolor = "~/.vim/colorscheme.vim"
+if filereadable(expand(vimcolor))
+  exe 'source' vimcolor
+endif
