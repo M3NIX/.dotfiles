@@ -5,6 +5,9 @@
 [core]
     editor = vim
 
+[diff]
+    external = difft
+
 [alias]
     a = add .
     s = status

@@ -9,7 +9,6 @@ alias ll='ls -lF --group-directories-first'
 alias ..='cd ..'
 alias mkdir='mkdir -pv'
 alias wget="wget -c"
-alias diff="icdiff $1 $2"
 alias hs='h | grep $1'
 
 # some new useful commands
