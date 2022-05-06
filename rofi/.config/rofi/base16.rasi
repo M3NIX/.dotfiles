@@ -62,6 +62,10 @@ listview {
     scrollbar:        true;
     padding:          2px 0px 0px ;
 }
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
 element {
     border:           0;
     padding:          1px ;
@@ -147,7 +151,3 @@ textbox-prompt-colon {
 }
 
 // %%base16_template_end%%
-element-text, element-icon {
-    background-color: inherit;
-    text-color:       inherit;
-}
