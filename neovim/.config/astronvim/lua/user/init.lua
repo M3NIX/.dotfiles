@@ -1,5 +1,7 @@
 local config = {
 
+  lsp = require "user.lsp",
+
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
     opt = {
@@ -8,7 +10,7 @@ local config = {
       softtabstop = 2,
       shiftwidth = 2,
       -- visuals
-      relativenumber = true, -- 
+      relativenumber = true,
       number = true,
       cursorline = true,
       cursorcolumn = true,
@@ -37,7 +39,7 @@ local config = {
 
   -- Default theme configuration
   default_theme = {
-    -- Modify the colors 
+    -- Modify the colors
     colors = {
       bg = "#1e1f21",
     }

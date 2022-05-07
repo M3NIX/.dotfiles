@@ -1,0 +1,30 @@
+return {
+  ensure_installed = {
+    "bash",
+    "bibtex",
+    "c",
+    "cmake",
+    "comment",
+    "cpp",
+    "css",
+    "dockerfile",
+    "go",
+    "html",
+    "http",
+    "javascript",
+    "json",
+    "latex",
+    "lua",
+    "make",
+    "markdown",
+    "python",
+    "regex",
+    "toml",
+    "vim",
+    "yaml",
+  },
+  matchup = {
+    enable = true,
+  },
+}
+
