@@ -10,7 +10,7 @@ git clone --recurse-submodules https://github.com/M3NIX/.dotfiles.git && cd .dot
 
 ## configuration
 
-- to install all neovim plugins run `nvim +PackerSync`
+- to install all neovim plugins run `nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'`
 - to select a base16-theme run `b16 <theme>` e.g. `b16 google-dark`
 - keyboard layout can be set in `x/.xinitrc`
 - export your display settings to `~/.screenlayout/config.sh` with ARandR
