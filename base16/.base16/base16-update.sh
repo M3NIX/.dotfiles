@@ -17,3 +17,5 @@ pybase16 inject -s $theme -f ~/.config/rofi/base16.rasi
 
 # set theme in vim
 echo "colorscheme base16-$theme" > ~/.vim/colorscheme.vim
+# set theme in nvim
+echo "return \"base16-$theme\"" > ~/.config/astronvim/lua/user/colorscheme.lua

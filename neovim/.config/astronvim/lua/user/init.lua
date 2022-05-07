@@ -1,5 +1,6 @@
 local config = {
 
+  colorscheme = require "user.colorscheme",
   lsp = require "user.lsp",
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
@@ -34,14 +35,6 @@ local config = {
       -- swap and undo settings
       swapfile = false,
       backup = false,
-    }
-  },
-
-  -- Default theme configuration
-  default_theme = {
-    -- Modify the colors
-    colors = {
-      bg = "#1e1f21",
     }
   },
 
