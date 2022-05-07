@@ -1,5 +1,10 @@
 ### aliases ###
 
+# editor
+alias vim="nvim"
+alias vimdiff='nvim -d'
+export EDITOR=nvim
+
 # some ls aliases
 alias l='ls -CF'
 alias la='ls -A'

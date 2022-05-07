@@ -3,7 +3,7 @@
     name = M3NIX
 
 [core]
-    editor = vim
+    editor = nvim
 
 [diff]
     external = difft

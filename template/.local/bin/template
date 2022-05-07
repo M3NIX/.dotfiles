@@ -24,7 +24,7 @@ if [ ${#templates[@]} -eq 0 ]; then
 elif [ ${#templates[@]} -eq 1 ]; then
     # copy template and open new file
     cp ${templates[0]} $PWD/$filename.$extension
-    vim $PWD/$filename.$extension
+    nvim $PWD/$filename.$extension
 else
     # let the user choose a template when multiple are found
     echo "Please choose a template:"
@@ -37,7 +37,7 @@ else
     if [[ $selection -gt 0 && $selection -le ${#templates[@]} ]]; then
         # copy template and open new file
         cp ${templates[(($selection-1))]} $PWD/$filename.$extension
-        vim $PWD/$filename.$extension
+        nvim $PWD/$filename.$extension
     else
         echo "Invalid selection"
         exit 1
