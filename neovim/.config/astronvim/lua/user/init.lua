@@ -1,7 +1,6 @@
 local config = {
 
   colorscheme = require "user.colorscheme",
-  lsp = require "user.lsp",
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
