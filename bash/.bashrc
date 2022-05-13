@@ -31,6 +31,17 @@ PROMPT_COMMAND='echo -ne "${TTY}\\033]0; ${PWD}\007"'
 # Use bash-completion, if available
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
 
+# Use fzf for ctrl-r, if available
+if [ -f /usr/share/fzf/key-bindings.bash ]; then
+    . /usr/share/fzf/key-bindings.bash
+    export FZF_ALT_C_OPTS="--preview 'tree -a -C {} | head -200'"
+    if [ -f /usr/bin/fd ]; then
+        export FZF_DEFAULT_COMMAND="fd --hidden"
+        export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+        export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
+    fi
+fi
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -52,4 +63,3 @@ fi
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-

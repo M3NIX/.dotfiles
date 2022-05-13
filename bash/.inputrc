@@ -22,9 +22,6 @@ set menu-complete-display-prefix on
 # Ex.: type "doc<tab>" to search for "Documents"
 set completion-ignore-case On
 
-# List all matches in case multiple possible completions are possible
-set show-all-if-ambiguous on
-
 # Immediately add a trailing slash when autocompleting symlinks to directories
 set mark-symlinked-directories on
 
