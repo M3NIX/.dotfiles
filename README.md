@@ -15,3 +15,4 @@ git clone --recurse-submodules https://github.com/M3NIX/.dotfiles.git && cd .dot
 - keyboard layout can be set in `x/.xinitrc`
 - export your display settings to `~/.screenlayout/config.sh` with ARandR
 - set your background image with `feh --bg-fill '<path/to/file>'`
+- to not track local changes to the gitconfig run `git update-index --skip-worktree git/.gitconfig`
