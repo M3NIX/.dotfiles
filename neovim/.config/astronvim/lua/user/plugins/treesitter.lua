@@ -9,6 +9,7 @@ return {
     "css",
     "dockerfile",
     "go",
+    "hcl",
     "html",
     "http",
     "javascript",
@@ -27,4 +28,3 @@ return {
     enable = true,
   },
 }
-
