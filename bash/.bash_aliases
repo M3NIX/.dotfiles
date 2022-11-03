@@ -41,8 +41,20 @@ function parse_git_branch() {
 	if [ ! "${BRANCH}" == "" ]
 	then
 		echo "[${BRANCH}]"
-	else
+		else
 		echo ""
+	fi
+}
+
+function parse_terraform_workspace() {
+	TF_WORKSPACE=`terraform workspace show`
+	if [[ -f /usr/bin/terraform ]];then
+		if [ ! "${TF_WORKSPACE}" == "default" ]
+		then
+	  	echo "[$TF_WORKSPACE]"
+		else
+			echo ""
+		fi
 	fi
 }
 
