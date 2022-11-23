@@ -2,7 +2,7 @@ return {
   automatic_installation = true,
   ensure_installed = {
     "ansiblels",
-    "asm_lsp",
+    -- "asm_lsp",
     "bashls",
     "clangd",
     "cssls",

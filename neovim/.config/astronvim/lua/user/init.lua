@@ -32,7 +32,24 @@ local config = {
       mapleader = " ", -- sets vim.g.mapleader
     },
   },
-
+  mappings = {
+    n = {
+      ["<leader>ve"] = { ":w | silent execute \"! avic -e -f % > /tmp/avic.tmp && mv /tmp/avic.tmp %\"<CR>",
+        desc = "ansible-vault inline encrypt" },
+      ["<leader>vd"] = { ":w | silent execute \"! avic -d -f % > /tmp/avic.tmp && mv /tmp/avic.tmp %\"<CR>",
+        desc = "ansible-vault inline decrypt" },
+    }
+  },
+  ["which-key"] = {
+    -- Add bindings which show up as group name
+    register = {
+      n = {
+        ["<leader>"] = {
+          ["v"] = { name = "ansible-vault" },
+        },
+      },
+    },
+  },
 }
 
 return config

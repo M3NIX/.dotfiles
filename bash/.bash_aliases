@@ -116,3 +116,10 @@ function extract {
     done
 fi
 }
+
+function aws_export {
+	read -p "AWS_ACCESS_KEY_ID: " AWS_ACCESS_KEY_ID
+	export AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID"
+  read -p "AWS_SECRET_ACCESS_KEY: "  -s AWS_SECRET_ACCESS_KEY
+	export AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY"
+}
