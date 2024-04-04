@@ -19,9 +19,12 @@ return {
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
-        "clangd",
+        --"clangd",
       },
       timeout_ms = 1000, -- default format timeout
+    },
+    config = {
+      clangd = { capabilities = { offsetEncoding = "utf-8" } },
     },
   },
 }
