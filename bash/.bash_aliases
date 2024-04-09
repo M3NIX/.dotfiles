@@ -29,6 +29,7 @@ alias pipi="python3 -m pip install --user" # install pip package as user
 alias tf="terraform"
 alias ssh-unlock="ssh-add ~/.ssh/id_ed25519"
 alias ssh-lock="ssh-add -d"
+alias decolor='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g"'
 
 alias vup="pactl set-sink-volume @DEFAULT_SINK@ +10%" # volume up
 alias vdown="pactl set-sink-volume @DEFAULT_SINK@ -10%" # volume down
