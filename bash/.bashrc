@@ -26,7 +26,7 @@ shopt -s autocd
 export PS1="\[\$(if [ \$? == 0 ]; then echo -e \"\\e[0;92m\"; else echo -e \"\\e[0;91m\"; fi)\]●\[\e[0m\] \[\e[0;34m\][\u@\h: \w]\[\e[0m\]\[\e[33m\]\`parse_git_branch\`\`parse_terraform_workspace\`\[\e[m\] $ "
 
 # set title to current directory
-PROMPT_COMMAND='echo -ne "${TTY}\\033]0; ${PWD}\007"'
+PROMPT_COMMAND='echo -ne "${TTY}\\033]0;${PWD}\007"'
 
 # Use bash-completion, if available
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
