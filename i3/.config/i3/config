@@ -80,6 +80,7 @@ floating_modifier $mod
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec lxterminal
+bindsym $mod+t exec /bin/bash -c '[[ $(xdotool getwindowfocus getwindowpid | xargs -I {} ps -p {} -o comm=) == "lxterminal" ]] && lxterminal --working-directory="$(xdotool getwindowfocus getwindowname)" || lxterminal'
 
 # kill focused window
 bindsym $mod+BackSpace kill
